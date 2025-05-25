@@ -38,7 +38,7 @@ const SingupForm = () => {
             <input
               required
               type="text"
-              name='firsname'
+              name='firstname'
               onChange={changeHandler}
               value={formData.firstname}
               placeholder='Enter first name'
