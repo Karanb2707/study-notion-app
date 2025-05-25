@@ -2,7 +2,7 @@ import React from 'react'
 import Template from '../components/Template'
 import loginImg from '../assets/study1.png'
 
-const Login = ({setLoggedIn}) => {
+const Login = ({setLoggedin}) => {
   return (
     <div>
       <Template
@@ -11,7 +11,7 @@ const Login = ({setLoggedIn}) => {
         desc2="Study, plan, and organize — all in one app."
         image={loginImg}
         formtype='login'
-        setLoggedIn={setLoggedIn}
+        setLoggedin={setLoggedin}
       />
     </div>
   )

@@ -4,7 +4,7 @@ import LoginForm from '../components/LoginForm'
 import googleImg from '../assets/google.png'
 
 // setLoggedIn
-const Template = ({title, desc1, desc2, image, formtype, setLoggedIn}) => {
+const Template = ({title, desc1, desc2, image, formtype, setLoggedin}) => {
 
   return (
     <div className='w-full flex gap-2 justify-evenly mt-6'>
@@ -19,7 +19,7 @@ const Template = ({title, desc1, desc2, image, formtype, setLoggedIn}) => {
             </div>
 
             {
-                formtype === 'signup' ? <SignupForm/> : <LoginForm/>
+                formtype === 'signup' ? <SignupForm/> : <LoginForm setLoggedin={setLoggedin}/>
             }
 
             <div className='flex items-center justify-center gap-2 text-blue-300'>

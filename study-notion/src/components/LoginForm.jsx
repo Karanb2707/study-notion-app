@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
-const LoginForm = () => {
+const LoginForm = ({setLoggedin}) => {
     
     const [formData, setFormData] = useState({email:'', password:''});
 
     const [passVisible, setPassVisible] = useState(false);
+
+    const navigate = useNavigate();
 
     function changeHandler(event) {
         const {name, value} = event.target;
@@ -17,8 +20,15 @@ const LoginForm = () => {
         }))
     }
 
+    function submitHandler(event) {
+        event.preventDefault()
+        setLoggedin(true);
+        toast.success('Logged In!')
+        navigate('/dashboard')
+    }
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
 
         <label>
             <p>Email Address</p>
