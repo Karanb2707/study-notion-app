@@ -17,13 +17,14 @@ const SingupForm = () => {
   }
 
   return (
-    <div>
+    <div className='flex flex-col ml-4'>
+
       {/* student & teacher */}
-      <div>
-        <button>
+      <div className='flex gap-4 rounded-md text-black font-semibold'>
+        <button className='py-2 px-8 border border-purple-950 rounded-md bg-yellow-300'>
           Student
         </button>
-        <button>
+        <button className='py-2 px-8 border border-purple-950 rounded-md bg-yellow-300'>
           Teacher
         </button>
       </div>

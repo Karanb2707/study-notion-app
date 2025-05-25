@@ -11,7 +11,7 @@ function App() {
   const [isLoggedin, setLoggedin] = useState(false);
 
   return (
-    <div className='w-10/12 mx-auto'>
+    <div className='w-10/12 mx-auto bg-slate-600 h-screen'>
       <Navbar isLoggedin={isLoggedin} setLoggedin={setLoggedin} />
 
       <Routes>
