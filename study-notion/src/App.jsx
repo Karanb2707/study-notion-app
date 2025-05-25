@@ -10,10 +10,8 @@ function App() {
 
   const [isLoggedin, setLoggedin] = useState(false);
 
-  // 46 min
-
   return (
-    <div>
+    <div className='w-10/12 mx-auto'>
       <Navbar isLoggedin={isLoggedin} setLoggedin={setLoggedin} />
 
       <Routes>
