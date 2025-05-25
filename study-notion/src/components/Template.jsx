@@ -1,8 +1,10 @@
 import React from 'react'
-import Frame from '../assets/bg1'
+import Frame from '../assets/bg1.png'
+import SignupForm from '../components/SingupForm'
+import LoginForm from '../components/LoginForm'
 
 // setLoggedIn
-const Template = ({title, desc1, desc2, image, formtype}) => {
+const Template = ({title, desc1, desc2, image, formtype, setLoggedIn}) => {
 
   return (
     <div>
@@ -12,6 +14,7 @@ const Template = ({title, desc1, desc2, image, formtype}) => {
                 <span>{desc1}</span>
                 <span>{desc2}</span>
             </p>
+            
 
             {
                 formtype === 'signup' ? <SignupForm/> : <LoginForm/>
