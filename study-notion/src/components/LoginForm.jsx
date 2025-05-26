@@ -28,9 +28,9 @@ const LoginForm = ({setLoggedin}) => {
     }
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className='flex flex-col gap-3 ml-4 mt-4'>
 
-        <label>
+        <label className='text-white font-semibold'>
             <p>Email Address</p>
 
             <input 
@@ -40,35 +40,40 @@ const LoginForm = ({setLoggedin}) => {
                 onChange={changeHandler}
                 value={formData.email}
                 placeholder='Enter email id'
+                className='text-white border border-slate-300 p-1 rounded-md mt-1 w-[280px]'
             />
 
         </label>
 
-        <label>
+        <label className='text-white font-semibold'>
             <p>Password</p>
 
-            <input 
-                required
-                type={passVisible ? 'text' : 'password'}
-                name="password"
-                onChange={changeHandler}
-                value={formData.password}
-                placeholder='Enter password'
-            />
+            <div className="relative w-[280px]">
+                <input
+                    required
+                    type={passVisible ? 'text' : 'password'}
+                    name="password"
+                    onChange={changeHandler}
+                    value={formData.password}
+                    placeholder='Enter password'
+                    className='text-white border border-slate-300 p-1 rounded-md mt-1 w-full'
+                />
 
-            <span onClick={() => setPassVisible(!passVisible)}>
-                {passVisible ? <IoEyeSharp/> : <FaEyeSlash/>}
-            </span>
+                <span onClick={() => setPassVisible(!passVisible)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 cursor-pointer">
+                    {passVisible ? <IoEyeSharp/> : <FaEyeSlash/>}
+                </span>
+            </div>
 
             <Link to='#'>
-                <p>
+                <p className='relative text-[12px] text-blue-200 mt-1 left-[180px]'>
                     Forgot Password
                 </p>
             </Link>
 
         </label>
 
-        <button>
+        <button className='p-2 mt-4 border border-red-300 bg-red-900 rounded-xl text-white font-semibold w-[180px] cursor-pointer'>
             Sign in
         </button>
 

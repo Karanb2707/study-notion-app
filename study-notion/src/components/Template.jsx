@@ -22,17 +22,21 @@ const Template = ({title, desc1, desc2, image, formtype, setLoggedin}) => {
                 formtype === 'signup' ? <SignupForm/> : <LoginForm setLoggedin={setLoggedin}/>
             }
 
-            <div className='flex items-center justify-center gap-2 text-blue-300'>
-                <div className='w-[120px] h-0.5 bg-white'></div>
-                <p>OR</p>
-                <div className='w-[120px] h-0.5 bg-white'></div>
-            </div>
+            <div className="flex flex-col items-start gap-4 mt-2 ml-4">
+                {/* OR Divider */}
+                <div className="flex items-center justify-center gap-2 text-blue-300">
+                    <div className="w-[100px] h-0.5 bg-white"></div>
+                    <p>OR</p>
+                    <div className="w-[100px] h-0.5 bg-white"></div>
+                </div>
 
-            <button className='flex justify-center items-center py-2 px-6 border border-purple-950 gap-4 bg-purple-700
-                rounded-xl mx-auto transform hover:scale-105 duration-300 shadow-sm hover:shadow-slate-500'>
-                <img src={googleImg} className='w-6 h-6'/>
-                <p className='text-white font-semibold'>Sign Up with Google</p>
-            </button>
+                {/* Google Sign Up Button */}
+                <button className="flex justify-center items-center py-2 px-6 mt-1 border border-purple-950 gap-4 bg-purple-700
+                    rounded-xl transform hover:scale-105 duration-300 shadow-sm hover:shadow-slate-500">
+                    <img src={googleImg} className="w-6 h-6" />
+                    <p className="text-white font-semibold">Sign Up with Google</p>
+                </button>
+            </div>
         </div>
 
         <div className='p-2'>
