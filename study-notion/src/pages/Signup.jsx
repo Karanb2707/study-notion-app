@@ -3,7 +3,7 @@ import Template from '../components/Template'
 import signupImg from '../assets/study2.png'
 
 
-const SignUp = ({setLoggedIn}) => {
+const SignUp = ({setLoggedin}) => {
   return (
     <div>
       <Template
@@ -12,7 +12,7 @@ const SignUp = ({setLoggedIn}) => {
         desc2="Level up your learning with smarter organization and focused study tools."
         image={signupImg}
         formtype="signup"
-        setLoggedIn={setLoggedIn}
+        setLoggedin={setLoggedin}
       />
     </div>
   )

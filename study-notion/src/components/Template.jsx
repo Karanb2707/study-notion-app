@@ -19,7 +19,7 @@ const Template = ({title, desc1, desc2, image, formtype, setLoggedin}) => {
             </div>
 
             {
-                formtype === 'signup' ? <SignupForm/> : <LoginForm setLoggedin={setLoggedin}/>
+                formtype === 'signup' ? <SignupForm setLoggedin={setLoggedin}/> : <LoginForm setLoggedin={setLoggedin}/>
             }
 
             <div className="flex flex-col items-start gap-4 mt-2 ml-4">

@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
+import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom';
 
-const SingupForm = () => {
+const SingupForm = ({setLoggedin}) => {
 
   const [formData, setFormData] = useState({ firstname: '', lastname: '', email: '', password: '', conpassword: '' })
 
   const [showPassword, setShowPassword] = useState(false);
+  const [showCPassword, setShowCPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   function changeHandler(event) {
     const { name, value } = event.target;
@@ -14,6 +19,15 @@ const SingupForm = () => {
       ...prev,
       [name]: value
     }))
+  }
+
+  function submitHandler(event) {
+    event.preventDefault();
+    setLoggedin(true);
+    toast.success('Logged in!');
+    navigate('/dashboard');
+
+    console.log('Final Data', formData);
   }
 
   return (
@@ -29,7 +43,7 @@ const SingupForm = () => {
         </button>
       </div>
 
-      <form className='flex flex-col gap-3'>
+      <form onSubmit={submitHandler} className='flex flex-col gap-3'>
 
         {/* First name and Last name */}
         <div className='flex flex-row mt-4 gap-2'>
@@ -103,7 +117,7 @@ const SingupForm = () => {
             <div className="relative">
               <input
                 required
-                type={showPassword ? 'text' : 'password'}
+                type={showCPassword ? 'text' : 'password'}
                 name='conpassword'
                 onChange={changeHandler}
                 value={formData.conpassword}
@@ -111,9 +125,9 @@ const SingupForm = () => {
                 className='text-white border border-slate-300 p-2 font-semibold rounded-md mt-1 w-[220px]'
               />
 
-              <span onClick={() => setShowPassword(!showPassword)} 
+              <span onClick={() => setShowCPassword(!showCPassword)} 
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 cursor-pointer">
-                {showPassword ? <FaEyeSlash /> : <IoEyeSharp />}
+                {showCPassword ? <FaEyeSlash /> : <IoEyeSharp />}
               </span>
             </div>
           </label>
