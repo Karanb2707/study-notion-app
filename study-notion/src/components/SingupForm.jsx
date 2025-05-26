@@ -20,11 +20,11 @@ const SingupForm = () => {
     <div className='flex flex-col ml-4'>
 
       {/* student & teacher */}
-      <div className='flex gap-4 rounded-md text-black font-semibold'>
-        <button className='py-2 px-8 border border-purple-950 rounded-md bg-yellow-300 cursor-pointer'>
+      <div className='flex gap-2 rounded-md text-black font-semibold w-[400px]'>
+        <button className='w-full p-2 border border-purple-950 rounded-md bg-yellow-300 cursor-pointer'>
           Student
         </button>
-        <button className='py-2 px-8 border border-purple-950 rounded-md bg-yellow-300 cursor-pointer'>
+        <button className='w-full border border-purple-950 rounded-md bg-yellow-300 cursor-pointer'>
           Teacher
         </button>
       </div>
@@ -42,7 +42,7 @@ const SingupForm = () => {
               onChange={changeHandler}
               value={formData.firstname}
               placeholder='Enter first name'
-              className='text-white border border-slate-300 p-2 rounded-md mt-1'
+              className='text-white border border-slate-300 font-semibold p-2 rounded-md mt-1'
             />
           </label>
 
@@ -55,7 +55,7 @@ const SingupForm = () => {
               onChange={changeHandler}
               value={formData.lastname}
               placeholder='Enter last name'
-              className='text-white border border-slate-300 p-2 rounded-md mt-1'
+              className='text-white border border-slate-300 font-semibold p-2 rounded-md mt-1'
             />
           </label>
         </div>
@@ -70,7 +70,7 @@ const SingupForm = () => {
             onChange={changeHandler}
             value={formData.email}
             placeholder='Enter email address'
-            className='text-white border border-slate-300 p-2 rounded-md mt-1'
+            className='w-[300px] text-white border border-slate-300 font-semibold p-2 rounded-md mt-1'
           />
         </label>
 
@@ -108,7 +108,7 @@ const SingupForm = () => {
                 onChange={changeHandler}
                 value={formData.conpassword}
                 placeholder='Enter confirm password'
-                className='text-white border border-slate-300 p-2 rounded-md mt-1 w-[220px]'
+                className='text-white border border-slate-300 p-2 font-semibold rounded-md mt-1 w-[220px]'
               />
 
               <span onClick={() => setShowPassword(!showPassword)} 
@@ -120,7 +120,7 @@ const SingupForm = () => {
 
         </div>
 
-        <button className='p-2 mt-4 border border-red-300 bg-red-900 rounded-xl text-white font-semibold w-[220px] cursor-pointer'>
+        <button className="w-[280px] p-2 mt-4 rounded-xl bg-red-900 border border-red-300 text-white font-semibold hover:bg-red-800 transition">
           Create Account
         </button>
 

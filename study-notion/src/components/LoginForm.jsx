@@ -77,7 +77,7 @@ const LoginForm = ({ setLoggedin }) => {
             {/* Submit Button */}
             <button
                 type="submit"
-                className="w-[180px] p-2 mt-4 rounded-xl bg-red-900 border border-red-300 text-white font-semibold hover:bg-red-800 transition"
+                className="w-[280px] p-2 mt-2 rounded-xl bg-red-900 border border-red-300 text-white font-semibold hover:bg-red-800 transition"
             >
                 Sign In
             </button>
