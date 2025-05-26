@@ -42,7 +42,7 @@ const SingupForm = () => {
               onChange={changeHandler}
               value={formData.firstname}
               placeholder='Enter first name'
-              className='text-white border border-slate-300 p-1 rounded-md mt-1'
+              className='text-white border border-slate-300 p-2 rounded-md mt-1'
             />
           </label>
 
@@ -55,7 +55,7 @@ const SingupForm = () => {
               onChange={changeHandler}
               value={formData.lastname}
               placeholder='Enter last name'
-              className='text-white border border-slate-300 p-1 rounded-md mt-1'
+              className='text-white border border-slate-300 p-2 rounded-md mt-1'
             />
           </label>
         </div>
@@ -70,7 +70,7 @@ const SingupForm = () => {
             onChange={changeHandler}
             value={formData.email}
             placeholder='Enter email address'
-            className='text-white border border-slate-300 p-1 rounded-md mt-1'
+            className='text-white border border-slate-300 p-2 rounded-md mt-1'
           />
         </label>
 
@@ -78,7 +78,7 @@ const SingupForm = () => {
         <div className='flex flex-row gap-2'>
           <label className='text-white'>
             <p>Password</p>
-            
+
             <div className="relative">
               <input
                 required
@@ -87,7 +87,7 @@ const SingupForm = () => {
                 onChange={changeHandler}
                 value={formData.password}
                 placeholder='Enter password'
-                className='text-white border border-slate-300 p-1 rounded-md mt-1'
+                className='text-white border border-slate-300 p-2 rounded-md mt-1'
               />
 
               <span onClick={() => setShowPassword(!showPassword)} 
@@ -108,7 +108,7 @@ const SingupForm = () => {
                 onChange={changeHandler}
                 value={formData.conpassword}
                 placeholder='Enter confirm password'
-                className='text-white border border-slate-300 p-1 rounded-md mt-1 w-[220px]'
+                className='text-white border border-slate-300 p-2 rounded-md mt-1 w-[220px]'
               />
 
               <span onClick={() => setShowPassword(!showPassword)} 
